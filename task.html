@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+<style type="text/css">
+	.container{
+    		margin-top: 3%;
+    		width: 30%;
+    		height: 60%;
+  	}
+  
+  	#logincontainer{
+    		box-shadow: 5px 12px 20px #888888;
+  	}
+  
+  	.header{
+    		display: flex;
+    		background-color: #33cccc;
+    		height: 50px;
+    		margin-bottom: 20px;
+    		margin-left: -20px;
+    		margin-right: -20px;
+    		color: white;
+  	}
+  
+	.header .fa-graduation-cap{
+    		margin-top: 10px;
+    		margin-left: 10px;
+  	}
+  
+  	.header h5{
+    		margin-top: 5px;
+    		align-content: center;
+    		margin-left: 34%;
+    		margin-right: 30%;
+  	}
+  
+  	.header .fa-times{
+    		margin-top: 10px;
+  	}
+  
+  	.inputText{
+    		display: flex;
+    		color: gray;
+  	}
+  
+  	.inputText .fa-envelope{
+    		margin-top: 8px;
+    		position: absolute;
+    		margin-left: 20%;
+  	}
+  
+  	.inputText .fa-unlock{
+    		margin-top: 8px;
+    		position: absolute;
+    		margin-left: 20%;
+  	}
+  
+  	input{
+    		height: 40px;
+    		width: 98%;
+    		margin-bottom: 2%;
+  	}
+  
+  	.btn-primary{
+    		margin-top: -10px;
+    		background-color: #33cccc;
+  	}
+  
+  	button{
+    		font-family: 'Open Sans', sans-serif;
+    		width: 98%;
+    		margin-top: 2.5%;
+    		margin-bottom: 2.5%;
+  	}
+  
+  	.tags{
+    		display: flex;
+  	}
+  
+  	.OR{
+    		display: flex;
+		color: gray;
+  	}
+  
+  	.btn-secondary{
+    		background-color: #003380;
+  	}
+  
+  	#forgotPswd{
+    		margin-right: 25%;
+		color: gray;
+  	}
+	
+	#register{
+		margin-right: -10%;
+		color: gray;
+	}
+  
+  	.btn-success{
+    		margin-top: 25px;
+    		background-color: #77b300;
+  	}
+  
+  	@media (max-width: 1200px) {
+    	.container{
+      		width: 40%;
+    	}
+ 
+	.inputText .fa-envelope{
+      		margin-top: 5px;
+      		position: absolute;
+      		margin-left: 30%;
+    	}
+  
+    	.inputText .fa-unlock{
+      		margin-top: 5px;
+      		position: absolute;
+      		margin-left: 30%;
+    	}
+  	}
+  
+  	@media (max-width: 800px) {
+    	.container{
+      		width: 70%;
+    	}
+  
+    	.inputText .fa-envelope{
+      		margin-top: 5px;
+      		position: absolute;
+      		margin-left: 50%;
+    	}
+  
+    	.inputText .fa-unlock{
+      		margin-top: 5px;
+      		position: absolute;
+      		margin-left: 50%;
+    	}
+  	}
+  
+  	@media (max-width: 600px) {
+    	.container{
+      		width: 90%;
+    	}
+  
+    	.inputText .fa-envelope{
+      		margin-top: 5px;
+      		position: absolute;
+      		margin-left: 70%;
+    	}
+  
+    	.inputText .fa-unlock{
+      		margin-top: 5px;
+      		position: absolute;
+      		margin-left: 70%;
+    	}
+  	}
+</style>
+</head>
+
+<body>
+    <div class="container" id="logincontainer">
+      <form class="login_form">
+        <div class="header">
+          <i class="fas fa-graduation-cap"></i>
+          <h5><b>Sign in</b></h5>
+          <i class="fas fa-times"></i>
+        </div>
+        <div class="inputText">
+          <input type="text" name="mail" placeholder="mail@example.com" required="required">
+          <span class="fas fa-envelope"></span>
+        </div>
+        <div class="inputText">
+          <input type="password" name="password" placeholder="password" required="required">
+          <span class="fas fa-unlock"></span>
+        </div>
+        <br/><br/>
+        <button type="button" class="btn btn-primary" id="Signin"><b>SIGN IN</b></button>
+        <br/>
+        <div class="tags">
+          <h6 id="forgotPswd">Forgot your password?</h6>
+          <h6 id="register">Register!</h6>
+        </div>
+        <br/>
+        <div class="OR">
+          <div class="col-6">
+            <hr>
+          </div>
+          <h6>OR</h6>
+          <div class="col-6">
+            <hr>
+          </div>
+        </div>
+        <br/>
+        <button type="button" name="button" class="btn btn-secondary"><b>f</b></button>
+        <br/>
+        <button type="button" name="button" class="btn btn-danger"><i>G</i></button>
+        <br/>
+        <button type="button" name="button" class="btn btn-success"><span><</span><b> EPAM LOGIN </b><span>></span></button>
+      </form>
+    </div>
+</body>
+</html>
